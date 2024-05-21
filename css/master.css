@@ -1,122 +1,131 @@
-:root{
-    --main-color:#10cab7;
-    --secondary-color:#2c4755;
-    --padding-section:60px;
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --padding-section: 60px;
 }
 
-*{
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing: border-box;
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background-color: black;
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-.repos-container{
-    width: 1090px;
-    margin: auto;
-    margin-top: 40px;
-}
-.repos-container .get-repos{
-    padding: 20px;
-    display: flex;
-    background-color: #eee;
-
-}
-.repos-container .get-repos input{
-width: 100%;
-padding: 15px 20px;
-font-size: 20px;
-height: 54px;
-border: none;
-}
-.repos-container .get-repos input:focus{
-outline: 2px solid teal;
+.repos-container {
+  max-width: 90%;
+  margin: auto;
+  margin-top: 40px;
+  padding: 0 10px;
 }
 
-
-.repos-container .get-repos .get-button{
-    width: 140px;
-    margin-left: 10px;
-    height: 54px;
-    background-color: teal;
-    line-height: 54px;
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-    color: white;
+.repos-container .get-repos {
+  padding: 20px;
+  display: flex;
+  background-color: #eee;
+  flex-direction: column;
 }
-  
+
+.repos-container .get-repos input {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 20px;
+  height: 54px;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.repos-container .get-repos input:focus {
+  outline: 2px solid teal;
+}
+
+.repos-container .get-repos .get-button {
+  width: 100%;
+  height: 54px;
+  background-color: teal;
+  line-height: 54px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+
+.show-data {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.repo-box {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.repo-box:hover {
+  transform: scale(1.05);
+}
+
+.repo-box a {
+  margin-top: 10px;
+  text-decoration: none;
+  background-color: #808080a3;
+  padding: 10px;
+  border-radius: 9px;
+  width: 100px;
+  text-align: center;
+  color: teal !important;
+  font-weight: bold;
+  align-self: center;
+}
+
+.repo-box span {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.repo-box .fa-star {
+  color: gold;
+  margin-right: 5px;
+}
+
+@media (max-width: 767px) {
+  .repos-container {
+      padding: 0 10px;
+  }
   .show-data {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: 20px 0;
-    padding: 20px;
-    margin-left: 43px;
+      grid-template-columns: 1fr;
+      margin-left: 0;
   }
-  
   .repo-box {
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    transition: 0.5s;
-    cursor: pointer;
-
+      width: 100%;
   }
-  .repo-box:hover{
-    transform: scale(1.1);
-  }
-  
   .repo-box a {
-    margin-top: 10px;
-    text-decoration: none;
-    background-color: #808080a3;
-    padding: 10px;
-    border-radius: 9px;
-    position: relative;
-    left: 92px;
-    width: 100px;
-    text-align: center;
-    color: teal !important;
-    font-weight: bold;
+      left: 0;
   }
-  
-  .repo-box span {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #555;
-  }
+}
 
-  .repo-box .fa-star {
-    color: gold;
-    margin-right: 5px;
-  }
-  @media (max-width:767px) {
-    .repos-container{
-        width: 412px;
-    }
-    .show-data{
-        margin-left: 7px;
-    }
-    .repo-box {
-        width: 100%;
-    }
-    .repo-box a {
-        left: 115px;
-    }
-    
-  }
-  .rname{
-    font-weight: bold;
-  }
-  .alert{
-    margin-top: 30px;
-  }
+.rname {
+  font-weight: bold;
+}
+
+.alert {
+  margin-top: 30px;
+}
